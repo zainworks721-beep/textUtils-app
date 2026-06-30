@@ -67,7 +67,7 @@ export default function TextUtils(props) {
                 <div style={{ color: props.mode === "light" ? "black" : "#fcfcfade" }}>
 
                     <h1>Your Text Summery</h1>
-                    <p>{text.split(" ").filter((el) => { return el.length !== 0 }).length} word and character {text.length}</p>
+                    <p>{text.split(/\s+/).filter((el) => { return el.length !== 0 }).length} word and character {text.length}</p>
                     <p>{Math.round(0.008 * text?.split(" ").length)} Minutes read</p>
 
                     <h2>Text Preview</h2>
